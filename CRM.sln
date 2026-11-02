@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.WebBlazor", "CRM.WebBla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Utility", "CRM.Utility\CRM.Utility.csproj", "{1FCE3274-7EDA-408E-8E10-C4D8B0A80D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Model", "CRM.Model\CRM.Model.csproj", "{AF400D98-FDB0-4FD9-B122-F913F461BD96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1FCE3274-7EDA-408E-8E10-C4D8B0A80D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FCE3274-7EDA-408E-8E10-C4D8B0A80D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FCE3274-7EDA-408E-8E10-C4D8B0A80D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF400D98-FDB0-4FD9-B122-F913F461BD96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF400D98-FDB0-4FD9-B122-F913F461BD96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF400D98-FDB0-4FD9-B122-F913F461BD96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF400D98-FDB0-4FD9-B122-F913F461BD96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
