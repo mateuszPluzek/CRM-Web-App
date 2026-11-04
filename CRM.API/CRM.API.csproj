@@ -20,10 +20,6 @@
   <ItemGroup>
     <ProjectReference Include="..\CRM.DataAccess\CRM.DataAccess.csproj" />
     <ProjectReference Include="..\CRM.Service\CRM.Service.csproj" />
-  </ItemGroup> 
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\" />
   </ItemGroup>
 
 </Project>

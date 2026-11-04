@@ -1,10 +1,10 @@
 
 using CRM.DataAccess;
-using CRM.Model.Identity;
-using Microsoft.OpenApi.Models;
+using CRM.Service;
+using CRM.Service.IService;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System.Diagnostics;
-using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace CRM.API
 {
@@ -13,7 +13,7 @@ namespace CRM.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");;
+            var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found."); ;
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
@@ -26,6 +26,8 @@ namespace CRM.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRM API", Version = "v1" });
             });
+
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             var app = builder.Build();
 
