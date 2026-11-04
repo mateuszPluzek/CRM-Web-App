@@ -28,7 +28,11 @@ namespace CRM.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRM API", Version = "v1" });
             });
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
+            {
+                //options for signing in
+                option.SignIn.RequireConfirmedEmail = true;
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
