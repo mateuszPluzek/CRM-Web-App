@@ -1,4 +1,4 @@
-﻿using CRM.Model.Identity;
+﻿using CRM.Model.IdentityModels;
 using CRM.Model.InputModels;
 using CRM.Service.IService;
 using Microsoft.AspNetCore.Identity;
@@ -31,6 +31,7 @@ namespace CRM.Service
             var user = new ApplicationUser
             {
                 Email = model.Email,
+                UserName = model.Email,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 DateOfBirth = model.DateOfBirth,

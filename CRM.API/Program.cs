@@ -1,10 +1,11 @@
-
+using CRM.Model.IdentityModels;
 using CRM.DataAccess;
 using CRM.Service;
 using CRM.Service.IService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 
 namespace CRM.API
 {
@@ -26,6 +27,10 @@ namespace CRM.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRM API", Version = "v1" });
             });
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 

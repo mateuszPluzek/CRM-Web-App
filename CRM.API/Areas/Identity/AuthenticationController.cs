@@ -1,6 +1,5 @@
 ﻿using CRM.Model.InputModels;
 using CRM.Service.IService;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
 

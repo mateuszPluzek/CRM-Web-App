@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using CRM.Model.Enums;
 
-namespace CRM.Model.Identity;
+namespace CRM.Model.IdentityModels;
 
 // Add profile data for application users by adding properties to the ApplicationUser class
 public class ApplicationUser : IdentityUser
